@@ -1,0 +1,188 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/Poppins-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
+.showcase {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* VIDEO */
+.bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(8, 18, 32, 0.75),
+    rgba(8, 18, 32, 0.35)
+  );
+}
+
+/* HEADER */
+.site-header {
+  position: absolute;
+  top: 32px;
+  left: 48px;
+  right: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+}
+
+.brand {
+  letter-spacing: 4px;
+  font-weight: 700;
+}
+
+/* HAMBURGER */
+.toggle {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.toggle span,
+.toggle::before,
+.toggle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+
+.toggle::before {
+  top: 10px;
+}
+
+.toggle span {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.toggle::after {
+  bottom: 10px;
+}
+
+/* CONTENT */
+.content {
+  position: relative;
+  z-index: 4;
+  max-width: 720px;
+  padding-left: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.content h1 {
+  font-size: 4rem;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.content p {
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.tagline {
+  display: block;
+  opacity: 0.75;
+  margin-bottom: 24px;
+}
+
+.cta {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #fff;
+  color: #111;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* SOCIAL */
+.social {
+  position: absolute;
+  bottom: 24px;
+  left: 80px;
+  display: flex;
+  gap: 20px;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* OVERLAY MENU */
+.menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 20, 40, 0.96);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease;
+  z-index: 20;
+}
+
+.menu.active {
+  transform: translateY(0);
+}
+
+/* CLOSE BUTTON */
+.close-menu {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 3rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* MENU ITEMS */
+.menu ul {
+  list-style: none;
+  text-align: center;
+}
+
+.menu li {
+  margin: 20px 0;
+}
+
+.menu a {
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
